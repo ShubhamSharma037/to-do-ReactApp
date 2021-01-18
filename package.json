@@ -40,5 +40,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "components": "^0.1.0",
+    "styled": "^1.0.0"
+  }
 }

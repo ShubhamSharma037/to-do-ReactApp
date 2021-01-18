@@ -1,0 +1,10 @@
+.title {
+  position: fixed;
+  top: 0;
+  max-height: 10vh;
+  width: 100%;
+  font-size: 3em;
+  padding: 15px 0;
+  text-align: center; }
+
+/*# sourceMappingURL=TitleBar.module.css.map */

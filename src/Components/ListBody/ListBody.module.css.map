@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ;EACJ,MAAM,EAAG,KAAK;EACd,KAAK,EAAE,GAAG;EACV,aAAa,EAAG,IAAI;EACpB,UAAU,EAAG,aAAa",
+"sources": ["../../scss/ListBody.scss"],
+"names": [],
+"file": "ListBody.module.css"
+}

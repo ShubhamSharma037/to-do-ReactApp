@@ -1,0 +1,32 @@
+.Button {
+  height: 50px;
+  width: 60px;
+  margin: 20px auto;
+  padding: 5px;
+  transition: .2s all ease; }
+  .Button button {
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 50%;
+    background-color: greenyellow; }
+    .Button button::before, .Button button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 60%;
+      background-color: #fff; }
+    .Button button::after {
+      width: 60%;
+      height: 4px; }
+  .Button:hover {
+    transform: rotate(180deg); }
+    .Button:hover button {
+      background-color: lightgreen; }
+
+/*# sourceMappingURL=AddButton.module.css.map */

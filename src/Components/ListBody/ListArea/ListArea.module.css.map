@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAS;EACL,MAAM,EAAE,IAAI;EACZ,KAAK,EAAG,GAAG;EACX,MAAM,EAAG,SAAS;EAClB,MAAM,EAAG,eAAe",
+"sources": ["../../../scss/ListArea.scss"],
+"names": [],
+"file": "ListArea.module.css"
+}

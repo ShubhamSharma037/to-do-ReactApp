@@ -1,0 +1,45 @@
+.Button{
+    height : 50px;
+    width : 60px;
+    // border : 1px solid red;
+    margin : 20px auto;
+    padding : 5px;
+    transition : .2s all ease;
+
+    button{
+        cursor: pointer;
+        position: relative;
+        height : 100%;
+        width : 100%;
+        border : none ;
+        border-radius : 50%;
+        background-color : greenyellow;
+
+        &::before, &::after{
+            content : '';
+            position: absolute;
+            top : 50%;
+            left : 50%;
+            transform: translate(-50%,-50%);
+            width : 4px;
+            height : 60%;
+            background-color: #fff;
+        }
+        &::after{
+            width : 60%;
+            height : 4px;            
+        }
+
+       
+    }
+
+    &:hover{
+        transform: rotate(180deg);
+        
+        button{
+            background-color: lightgreen;
+        }
+    }
+
+
+}
