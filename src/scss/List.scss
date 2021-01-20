@@ -1,0 +1,31 @@
+.List{
+    width : 100%;
+    padding : 5px;
+    // box-shadow: 2px 2px 6px #ccc;
+    border-radius: 5px;
+    // border : 1px solid #000;
+
+    span{
+        font-size: 16px;
+        color : #000;
+        display: inline;
+    }
+}
+
+.text{
+    height : 80%;
+    width : 100%;
+    font-size: 20px;
+    padding-bottom : 5px;
+    border : none;
+    border-bottom : 1px solid blue;
+    caret-color: blue;
+}
+
+.addButton{
+    margin-top : 10px;
+    margin-left: 46%;
+    height : 30px;
+    width : 80px;
+
+}

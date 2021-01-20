@@ -2,6 +2,7 @@
   height: 500px;
   width: 80%;
   border-radius: 15px;
-  box-shadow: 0 0 12px #ccc; }
+  box-shadow: 0 0 12px #ccc;
+  overflow: auto; }
 
 /*# sourceMappingURL=ListBody.module.css.map */

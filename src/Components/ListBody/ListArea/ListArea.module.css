@@ -1,7 +1,13 @@
 .ListArea {
-  height: auto;
-  width: 95%;
-  margin: 10px 30px;
-  border: 2px dashed #ccc; }
+  height: 48vh;
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto; }
+
+.empty {
+  font-size: 1.5em;
+  border: 2px dashed #ccc;
+  color: #ddd;
+  text-align: center; }
 
 /*# sourceMappingURL=ListArea.module.css.map */
