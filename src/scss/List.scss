@@ -1,31 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
 .List{
+    height : auto;
     width : 100%;
     padding : 5px;
-    // box-shadow: 2px 2px 6px #ccc;
-    border-radius: 5px;
+    caret-color: rgb(98, 98, 247);
     // border : 1px solid #000;
-
-    span{
-        font-size: 16px;
-        color : #000;
-        display: inline;
-    }
+    
 }
 
 .text{
     height : 80%;
     width : 100%;
-    font-size: 20px;
     padding-bottom : 5px;
+
+    font-size: 30px;
+    font-family: 'Patrick Hand', cursive;
+    
     border : none;
     border-bottom : 1px solid blue;
-    caret-color: blue;
+    
+    text-transform: capitalize;
+    outline : none;
+    
+    
 }
 
-.addButton{
+
+
+
+
+.ListArea_button{
+    
+    // border : 1px solid #000;
+    width : 100%;
+    height : auto;
     margin-top : 10px;
-    margin-left: 46%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    gap: 10px;
+
+}
+
+
+.ListArea_buttonAdd, .ListArea_buttonCancel{
     height : 30px;
     width : 80px;
-
+    border-radius: 10px;
+    font-size : 15px;
+    font-family: 'Architects Daughter', cursive;
+    font-weight: bold;
+    background-color: transparent;
 }
+
+.ListArea_buttonAdd{
+    color : lightgreen;
+}
+
+.ListArea_buttonCancel{
+    color : lightcoral;
+}
+
+
+   

@@ -1,0 +1,41 @@
+.list {
+  padding: 0 10px;
+  margin-top: 10px;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #ccc;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .list p {
+    padding: 0 10px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: 'Patrick Hand', cursive;
+    margin-left: 10px; }
+
+.actions {
+  height: 90%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.doneButton, .deleteButton {
+  height: 70%;
+  width: 45%;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none; }
+  .doneButton img, .deleteButton img {
+    height: 100%;
+    width: 100%; }
+  .doneButton:active, .deleteButton:active {
+    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1; }
+
+/*# sourceMappingURL=Slist.module.css.map */

@@ -1,37 +1,81 @@
 import classes from './List.module.css';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+
 
 
 interface Props{
-    id : number
+    addListHandler : Function,
+    removeListHandler : Function,
+    addList : Function,
+    remove : Function
+ 
 }
 
 const Lists : React.FC<Props> = (props) =>{
 
-    let [state, setState] = useState({isDisabled : true})
+   const [state,setState] = useState({
+       inputString : String()
+   })
 
-    const buttonStateHandler = (event : React.FormEvent<HTMLInputElement>) =>{
+   useEffect(()=>{
+    //    console.log("List rendered " + state.inputString);       
+       document.getElementById('txt')?.focus();
+   })
+
+
+    const addListBtn = () =>{
         
-        let text : String = event.currentTarget.value as String;
+         
+        if(state.inputString!==""){
+            const inputBox =  document.getElementById('txt') as HTMLElement;
+            inputBox.innerText="";
+            
+            props.addList(state.inputString);
+            props.addListHandler()
 
-        if(text.length > 5){
+        }
+
+    }
+
+    
+    const createListWithEnterBtn = (event : React.KeyboardEvent<HTMLInputElement>) =>{
+
+        const userInput : string = event.currentTarget.value;
+
+
+        if(event.key==='Enter'){
+            addListBtn();
+        }
+
+        else{
+
             setState({
                 ...state,
-                isDisabled : false
+                inputString : userInput
             })
         }
-        else if(text.length === 0){
-            setState({
-                ...state,
-                isDisabled : true
-            })
-        }
+        
+
+    }
+
+    
+    const removeListBtn = () =>{
+        props.remove();
     }
 
     return(
-        <section className={classes.List}>
-            <input id='text' className={classes.text} onChange={(event : React.FormEvent<HTMLInputElement>)=>buttonStateHandler(event)}/>
-            <button className={classes.addButton} disabled={state.isDisabled}>Add</button>
+        
+        <section id='List' className={classes.List}>  
+
+            <input className={classes.text}  type='text' id='txt'
+                onKeyUp={event => createListWithEnterBtn(event)}  placeholder="Enter your task"
+            /> 
+
+            <div className={classes.ListArea_button}>
+                <button type='button' id='add' className={classes.ListArea_buttonAdd} onClick={addListBtn}>Add</button>
+                <button type='button' id='cancel' className={classes.ListArea_buttonCancel} onClick={removeListBtn}>Cancel</button>
+            </div>
         </section>
     )
 }

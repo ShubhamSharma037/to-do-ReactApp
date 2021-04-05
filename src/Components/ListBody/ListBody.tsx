@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import classes from './ListBody.module.css';
 import AddButton from './AddButton/AddButton';
 import ListArea from './ListArea/ListArea';
@@ -6,26 +6,63 @@ import ListArea from './ListArea/ListArea';
 
 
 const ListBody : React.FC = () =>{
-
+    
     let [state, setState] = useState({
-        addList : 0
+        listCount : Number(),
+        temp : Number(),
+        addList : Boolean()
     })
 
-    useEffect(()=>{
-        console.log(state.addList)
-    });
 
+    
     const addListHandler = () =>{
         setState({
             ...state,
-            addList : state.addList+1
+            listCount : state.listCount + 1
+        })
+    }
+
+    const  removeListHandler = () =>{
+     
+        let updateCount = state.listCount -1
+        
+        setState({
+            ...state,
+            temp: updateCount>=0?updateCount:0,
+            listCount : updateCount>=0?updateCount:0
+        })
+
+    }
+
+    const addInputFieldHandler = () =>{
+
+        setState({
+            ...state,
+            temp : state.listCount + 1,
+            addList : true
+        })
+
+    }
+    
+    
+    const removeInputFieldHandler = () =>{
+        
+        setState({
+            ...state,
+            addList : false
         })
     }
 
     return(
         <section className={classes.listBox}>
-            <AddButton click={addListHandler}/>
-            <ListArea isEmpty={state.addList}/>
+            <AddButton  click={addInputFieldHandler}/>
+            <ListArea  
+                    addList = {state.addList} 
+                    temp={state.temp} 
+                    addListHandler = {addListHandler} 
+                    removeListHandler={removeListHandler}
+                    removeInputBox = {removeInputFieldHandler}
+            />
         </section>
     )
 }

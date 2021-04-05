@@ -26,24 +26,25 @@ const createRippleEffect = (event : React.MouseEvent<HTMLButtonElement, MouseEve
     if(ripple){
         ripple.remove();
     }
-
     button.appendChild(circle);
-
 }
 
 
-const addButton : React.FC<Props> = (props) =>{
+const AddButton : React.FC<Props> = (props) =>{
 
+    
 
     return(
         <div className={classes.Button}>
-            <button onClick={(event : React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
-                createRippleEffect(event)
-                props.click()
-            }}/>
+            <button id='addBtn' 
+                onClick={(event : React.MouseEvent<HTMLButtonElement, MouseEvent>)=>{
+                    createRippleEffect(event)
+                    props.click()
+                }}
+            />
         </div>
     )
 }
 
 
-export default addButton;
+export default AddButton;
